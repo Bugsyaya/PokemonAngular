@@ -11,7 +11,16 @@
   </head>
 
   <body ng-app="myApp" class="row">
-    <div class="col-md-12">
+    <div class="container">
+      <div class="jumbotron">
+        <h1>Pokedex !</h1>
+
+      <!--  <div ng-repeat="type in types">
+          <input type="checkbox" value="grass" name="grass"/> {{type.name}}
+        </div>-->
+      </div>
+    </div>
+    <div class="col-md-12 col-md-offset-1">
       <div ui-view>
       </div>
     </div>
