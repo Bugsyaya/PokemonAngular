@@ -7,12 +7,13 @@ app.config(function($stateProvider, $urlRouterProvider) {
   $stateProvider
     .state('list', {
       url: '/list',
-      controller: 'myCtrl',
+
       resolve: {
           pokemons: ['service',function(service) {
             return service.getMany();
           }],
       },
+      controller: 'myCtrl',
     // template: '<div class="col-md-12">Fetching list.<br><div ui-view></div></div>'
     template: '<div class="col-md-12">Listsqdfqsdf<br>{{pokemons}}<h1 ng-repeat="pokemon in pokemons.$object">{{pokemon.name}}</h1><div ui-view></div></div>'
   })
