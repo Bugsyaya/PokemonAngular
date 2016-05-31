@@ -7,7 +7,6 @@ function(Restangular)
   {
     var url = "https://pokeapi.co/api/v2/pokemon-species?limit=800";
     var singleSearch = Restangular.oneUrl('betaSearch', url);
-
     return singleSearch.get().then(function(response){
       list = [];
 
@@ -21,6 +20,15 @@ function(Restangular)
       return list;
     })
   };
+
+  this.getType = function()
+  {
+    var url = "https://pokeapi.co/api/v2/type";
+    var singleSearch = Restangular.oneUrl('betaSearch', url);
+    return singleSearch.get().then(function(response){
+      return response.results;
+    })
+  }
 
   this.getOne = function(key)
   {

@@ -3,3 +3,20 @@
 	padding-left: 0px;
 	padding-right: 0px;
 }
+
+h1
+{
+	text-align: center;
+}
+
+.seeNamePic{
+	background-color: #E1E1E1;
+	margin: 2px;
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+.jumbotron
+{
+	background-color: #C5C5C5;
+}
