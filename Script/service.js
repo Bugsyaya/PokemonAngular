@@ -8,7 +8,7 @@ app.service("service",['Restangular',
         this.getMessage = function(key)
         {
           var map = {
-            Birth: 'http://foaas.com/off/Alice/Bob',
+            Birth: 'http://pokeapi.co/api/v2/pokemon/?',
             Childhood: 'http://foaas.com/everyone/Charlie',
             Study: 'http://foaas.com/cool/Daniel',
             Phd: 'http://foaas.com/yoda/Emeric/François',
