@@ -1,26 +1,27 @@
-// Ensemble de methodes d'appel a l'api
-// Message est la variable bindé
 app.service("service",['Restangular',
-    function(Restangular)
-    {
-        this.message = "<Pas de message>";
+function(Restangular)
+{
 
-        this.getMessage = function(key)
-        {
-          var map = {
-            Birth: 'http://pokeapi.co/api/v2/pokemon/?',
-            Childhood: 'http://foaas.com/everyone/Charlie',
-            Study: 'http://foaas.com/cool/Daniel',
-            Phd: 'http://foaas.com/yoda/Emeric/François',
-            Career: 'http://foaas.com/what/Gautier',
-            WorkingLife: 'http://foaas.com/xmas/Honoré',
-            Pension: 'http://foaas.com/tucker/Isabelle',
-            Death: 'http://foaas.com/keepcalm/Joséphine'
-          };
-          var singleSearch = Restangular.oneUrl('betaSearch', map[key]);
-          this.message = singleSearch.get().then(function(response){
-            return response.message;
-          })
-        };
-    }]
+  this.getMany = function()
+  {
+    var url = "https://pokeapi.co/api/v2/pokemon";
+    var singleSearch = Restangular.oneUrl('betaSearch', url);
+
+    this.message = singleSearch.get().then(function(response){
+      return response.message;
+    })
+
+  };
+
+  this.getOne = function(key)
+  {
+    var url = "https://pokeapi.co/api/v2/pokemon/" + key;
+    var singleSearch = Restangular.oneUrl('betaSearch', url);
+
+    this.message = singleSearch.get().then(function(response){
+      return response.message;
+    })
+  }
+
+}]
 );
