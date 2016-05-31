@@ -9,7 +9,16 @@ function(Restangular)
     var singleSearch = Restangular.oneUrl('betaSearch', url);
 
     return singleSearch.get().then(function(response){
-      return response.results;
+      list = [];
+
+      response.results.forEach(item => {
+        var pokemon = {
+          name: item.name,
+          id: item.url.split('/')[6]
+        }
+        list.push(pokemon)
+        });
+      return list;
     })
   };
 
