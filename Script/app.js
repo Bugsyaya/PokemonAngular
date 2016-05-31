@@ -14,7 +14,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
           }],
       },
       controller: 'myCtrl',
-    template: '<div class="col-md-12">List of pokemons<br><h1 ng-repeat="pokemon in pokemons">{{pokemon.name}}</h1><div ui-view></div></div>'
+    template: '<div class="col-md-3 portfolio-item" ui-view  ng-repeat="pokemon in pokemons"><h1>{{pokemon.name}}</h1><a href="#"><img class="img-responsive" src="http://pokeapi.co/media/img/1.png" alt=""></a></div>'
   })
   .state('list.details', {
     url: '/list/:id',
