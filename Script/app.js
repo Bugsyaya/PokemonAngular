@@ -11,7 +11,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
           }],
       },
       controller: 'myCtrl',
-    template: '<div class="col-md-2 portfolio-item seeNamePic" ui-view  ng-repeat="pokemon in pokemons"><h1>{{pokemon.name}}</h1><img class="img-responsive col-md-6" src="http://pokeapi.co/media/sprites/pokemon/back/1.png" alt=""><img class="img-responsive col-md-6" src="http://pokeapi.co/media/sprites/pokemon/1.png" alt=""><img class="img-responsive col-md-6" src="http://pokeapi.co/media/sprites/pokemon/back/shiny/1.png" alt=""><img class="img-responsive col-md-6" src="http://pokeapi.co/media/sprites/pokemon/shiny/1.png" alt=""></div>'
+    template: '<div class="col-md-2 portfolio-item seeNamePic" ui-view  ng-repeat="pokemon in pokemons"><h1>{{pokemon.name}}</h1><img class="img-responsive col-md-6" src="http://pokeapi.co/media/sprites/pokemon/back/{{pokemon.id}}.png" alt=""><img class="img-responsive col-md-6" src="http://pokeapi.co/media/sprites/pokemon/{{pokemon.id}}.png" alt=""><img class="img-responsive col-md-6" src="http://pokeapi.co/media/sprites/pokemon/back/shiny/{{pokemon.id}}.png" alt=""><img class="img-responsive col-md-6" src="http://pokeapi.co/media/sprites/pokemon/shiny/{{pokemon.id}}.png" alt=""></div>'
   })
   .state('list.details', {
     url: '/list/:id',
