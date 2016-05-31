@@ -2,10 +2,10 @@ app.service("service",['Restangular',
 function(Restangular)
 {
 
-  // 
+  //
   this.getMany = function()
   {
-    var url = "https://pokeapi.co/api/v2/pokemon";
+    var url = "https://pokeapi.co/api/v2/pokemon-species?limit=800";
     var singleSearch = Restangular.oneUrl('betaSearch', url);
 
     return singleSearch.get().then(function(response){
