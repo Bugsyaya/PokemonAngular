@@ -5,7 +5,7 @@ function(Restangular)
   //
   this.getMany = function()
   {
-    var url = "https://pokeapi.co/api/v2/pokemon-species?limit=800";
+    var url = "https://pokeapi.co/api/v2/pokemon-species?limit=100";
     var singleSearch = Restangular.oneUrl('betaSearch', url);
     return singleSearch.get().then(function(response){
       list = [];
